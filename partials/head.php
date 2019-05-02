@@ -3,7 +3,8 @@
 //Website variables
 $websiteData = [
     'siteURL' => '',
-    'siteName' => ''
+    'siteName' => '',
+    'ogImage' => ''
 ];
 
 ?>

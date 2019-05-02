@@ -71,13 +71,6 @@ module.exports = (env, argv) => {
                 configFile: "config/.prettierrc.json",
                 extensions: [".css", ".scss", ".js", ".json", "html"]
             })
-            // new CleanWebpackPlugin({
-            //     verbose: isDev,
-            //     dry: isDev,
-            //     // cleanOnceBeforeBuildPatterns: [
-            //     //     path.join(process.cwd(), "dist/**/*")
-            //     // ]
-            // })
         ]
     };
 };

@@ -5,7 +5,6 @@ $pageData = [
     'pageTitle' => '',
     'pageDescription' => '',
     'activePage' => '',
-    'ogImage' => '',
 ];
 
 ?>
@@ -16,7 +15,7 @@ $pageData = [
         Hero
         ===================== -->
     <section>
-    <h1>Test TEST!</h1>
+    <h1>Test</h1>
     </section>
 
 <?php include_once('partials/footer.php') ?>
