@@ -1,0 +1,1 @@
+prettier "./**/*.{css,scss,html,json,js}" --config ./config/.prettierrc --ignore-path ./config/.prettierignore --write && webpack --mode production
