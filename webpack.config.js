@@ -17,16 +17,12 @@ module.exports = (env, argv) => {
             app: "./src/js/app.js"
         },
         output: {
-            path: path.resolve(__dirname, "dist/js"),
-            publicPath: "/dist/js",
+            path: path.resolve(__dirname, "public/js"),
+            publicPath: "/public/js",
             filename: "[name].js"
         },
         watchOptions: {
             ignored: /node_modules/
-        },
-        devServer: {
-            compress: true,
-            open: "Google Chrome"
         },
         module: {
             rules: [
@@ -37,7 +33,7 @@ module.exports = (env, argv) => {
                 },
                 {
                     test: /\.scss$/,
-                    exclude: /node_modules/,
+                    //exclude: /node_modules/,
                     use: [
                         MiniCssExtractPlugin.loader,
                         "css-loader",
@@ -65,11 +61,7 @@ module.exports = (env, argv) => {
         },
         plugins: [
             new MiniCssExtractPlugin({
-                filename: isDev ? "../css/main.css" : "../css/main.min.css"
-            }),
-            new PrettierPlugin({
-                configFile: "config/.prettierrc.json",
-                extensions: [".css", ".scss", ".js", ".json", "html"]
+                filename: "../css/app.css"
             })
         ]
     };

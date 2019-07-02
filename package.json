@@ -9,9 +9,7 @@
     },
     "author": "Ainsley Clark",
     "license": "MIT",
-    "dependencies": {
-        "jquery": "^3.4.1"
-    },
+    "dependencies": {},
     "devDependencies": {
         "@babel/core": "^7.4.4",
         "autoprefixer": "^9.5.1",
@@ -25,7 +23,6 @@
         "prettier-webpack-plugin": "^1.2.0",
         "sass-loader": "^7.1.0",
         "webpack": "^4.30.0",
-        "webpack-cli": "^3.3.1",
-        "webpack-dev-server": "^3.3.1"
+        "webpack-cli": "^3.3.1"
     }
 }
