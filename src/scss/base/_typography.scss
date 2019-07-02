@@ -6,7 +6,7 @@
 /**
  * Basic typography style for copy text
  */
+html,
 body {
-    color: $text-color;
-    //!SET font: normal 125% / 1.4 $text-font-stack;
+    font-family: $font;
 }

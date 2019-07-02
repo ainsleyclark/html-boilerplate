@@ -1,1 +1,1 @@
-webpack --mode development && vagrant up
+webpack --mode development --watch
