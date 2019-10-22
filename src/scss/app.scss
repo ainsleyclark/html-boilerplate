@@ -9,7 +9,7 @@
 /* ====================
     Vendor
     ==================== */
-@import "vendor/mesh/src/mesh.scss";
+@import "vendor/mesh/src/mesh";
 
 /*  ====================
     Abstracts
@@ -41,3 +41,8 @@
 /* ====================
     Pages
     ==================== */
+
+/* ====================
+    Sections
+    ==================== */
+@import "sections/_section";

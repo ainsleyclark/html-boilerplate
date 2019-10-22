@@ -2,15 +2,15 @@
 
 //Website variables
 $websiteData = [
-    'siteURL' => 'https://www.parking4less.com/flying-with-a-disability',
-    'siteName' => 'Parking4Less',
+    'siteURL' => '',
+    'siteName' => '',
     'ogImage' => ''
 ];
 
 //Page variables
 $pageData = [
-    'pageTitle' => 'Parking4Less - A full guide to flying with a disability',
-    'pageDescription' => 'In this guide, we’ll discuss everything you can do to make planning your holiday easier. From the flights themselves, to staying safe while you’re away, this is your one-stop-shop for accessible travel advice. ',
+    'pageTitle' => '',
+    'pageDescription' => '',
 ];
 
 ?>
@@ -40,8 +40,6 @@ $pageData = [
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/app.css">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="https://www.parking4less.com/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="https://www.parking4less.com/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <!--[if lte IE 9]>
@@ -50,12 +48,7 @@ $pageData = [
         </div>
     <![endif]-->
 <main>
-    <?php include_once('partials/hero.php') ?>
-    <?php include_once('partials/accessible.php') ?>
-    <?php include_once('partials/flying.php') ?>
-    <?php include_once('partials/enjoying.php') ?>
-    <?php include_once('partials/medical.php') ?>
-    <?php include_once('partials/faqs.php') ?>
+    <?php include_once('partials/SECTION.php') ?>
 </main>
     <?php include_once('partials/footer.php') ?>
 </body>

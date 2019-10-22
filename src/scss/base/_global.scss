@@ -11,27 +11,35 @@ body {
     margin: 0;
 }
 
-/**
- * Make all elements from the DOM inherit from the parent box-sizing
- * Since `*` has a specificity of 0, it does not override the `html` value
- * making all elements inheriting from the root box-sizing value
- * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
- */
 *,
 *::before,
 *::after {
     box-sizing: inherit;
 }
 
-/**
- * Basic styles for links
- */
-a {
-    color: #ffffff; //!SET
-    text-decoration: none;
+.trans {
+	transition: all 0.4s;
 
-    @include on-event {
-        color: #ffffff; //!SET
-        text-decoration: underline;
-    }
+	&.slow {
+		transition: all 3s;
+	}
+}
+
+//Resets
+figure {
+	margin: 0;
+}
+
+ul {
+	list-style-type: none;
+}
+
+// Highlight colour
+::selection {
+	background: color('primary'); /* WebKit/Blink Browsers */
+	color: #000; //!SET
+}
+::-moz-selection {
+	background: color('primary'); /* Gecko Browsers */
+	color: #000; //!SET
 }

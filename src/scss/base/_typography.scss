@@ -8,5 +8,71 @@
  */
 html,
 body {
+    color: #000; //!SET
     font-family: $font;
+    font-size: 90%;
+    font-kerning: normal;
+	font-variant-ligatures: common-ligatures;
+
+	@include media-tab {
+		font-size: 95%;
+	}
+
+	@include media-desk {
+		font-size: 100%;
+	}
+
+	@include media-hd {
+		font-size: 102.5%;
+	}
+}
+
+//@include fluid-type(320px, 1408px, 34px, 98px);
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+
+/**
+ * Basic styles for links
+ */
+ a {
+    color: #ffffff; //!SET
+    text-decoration: none;
+
+    @include on-event {
+        color: #ffffff; //!SET
+        text-decoration: underline;
+    }
 }

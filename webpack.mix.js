@@ -1,7 +1,3 @@
-const mix = require('laravel-mix');
-const Path = require('path');
-const BrowsersSupport = require("./config/browserslistrc.js");
-
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -12,6 +8,14 @@ const BrowsersSupport = require("./config/browserslistrc.js");
  | file for the application as well as bundling up all the JS files.
  |
  */
+
+/**
+ * Require & Import
+ * 
+ */
+const mix = require('laravel-mix');
+const Path = require('path');
+const BrowsersSupport = require("./config/browserslistrc.js");
 
 mix.setPublicPath('public')
 
@@ -28,6 +32,14 @@ mix.js('src/js/app.js', 'public/js/app.js')
  * 
  */
 mix.sass('src/scss/app.scss', 'public/css/app.css')
+
+
+/**
+ * BrowserSync //! Optional
+ * 
+ */
+// mix.browserSync({
+// });
 
 /**
  * Production
