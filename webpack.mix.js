@@ -58,4 +58,23 @@ if (mix.config.production) {
             }
         }
     })
+
+    mix.imagemin(
+        'img/**.*',
+        {
+            context: 'resources',
+        },
+        {
+            optipng: {
+                optimizationLevel: 5
+            },
+            jpegtran: null,
+            plugins: [
+                require('imagemin-mozjpeg')({
+                    quality: 100,
+                    progressive: true,
+                }),
+            ],
+        }
+    );
 }
