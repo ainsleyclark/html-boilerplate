@@ -1,3 +1,1 @@
-$(document).ready(function() {
-    console.log("main.js & jquery is loaded");
-});
+console.log('Javascript Loaded');
