@@ -11,8 +11,20 @@
  * 
  */
 
+//Vendor
+import LazyLoad from 'vanilla-lazyload';
+
 /**
  *  Comments
  * 
  */
 console.log('Javascript Loaded');
+
+/**
+ * Vanilla Lazyload
+ * 
+ */
+let lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazy"
+    // ... more custom settings?
+});

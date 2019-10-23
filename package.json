@@ -17,7 +17,9 @@
     },
     "author": "Ainsley Clark",
     "license": "MIT",
-    "dependencies": {},
+    "dependencies": {
+        "vanilla-lazyload": "^12.2.0"
+    },
     "devDependencies": {
         "autoprefixer": "^9.6.5",
         "browser-sync": "^2.26.7",

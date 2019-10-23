@@ -1,7 +1,7 @@
 <!-- =====================
     Hero
     ===================== -->
-<section class="hero">
+<section class="hero" id="hero">
     <div class="container">
         <div class="row">
             <div class="col-12">
