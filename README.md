@@ -1,5 +1,5 @@
 # HTML Boilerplate
+A comprehensive HTML/PHP boilerplate to kick start resources, apps & web builds. Using Laravel mix to compile CSS & JS.
 
-## Stuff to Add
-- Colour Variables in _variables.scss (mesh), white black etc.
-- Add Nav?
+## How to use:
+Clone repo and run ```npm i``` to install dependencies .
