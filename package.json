@@ -18,14 +18,17 @@
     "author": "Ainsley Clark",
     "license": "MIT",
     "dependencies": {
+        "imagemin-mozjpeg": "^8.0.0",
         "vanilla-lazyload": "^12.2.0"
     },
     "devDependencies": {
         "autoprefixer": "^9.6.5",
         "browser-sync": "^2.26.7",
         "browser-sync-webpack-plugin": "^2.2.2",
+        "copy-webpack-plugin": "^5.0.4",
         "cross-env": "^6.0.3",
         "eslint": "^6.5.1",
+        "imagemin-webpack-plugin": "^2.4.2",
         "laravel-mix": "^5.0.0",
         "laravel-mix-imagemin": "^1.0.3",
         "node-sass": "^4.12.0",
