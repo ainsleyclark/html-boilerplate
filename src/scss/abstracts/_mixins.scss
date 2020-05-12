@@ -3,35 +3,6 @@
 // This file contains all mixin's for use with scss files.
 // -----------------------------------------------------------------------------
 
-// Breakpoint Mixins
-// ==========================================================================
-
-/// @author Ainsley Clark
-/// Returns mediaquery based on breakpoint set in _variables.scss
-@mixin media-sm {
-    @media (min-width: #{$grid-breakpoint-mob}) {
-        @content;
-    }
-}
-
-@mixin media-md {
-    @media (min-width: #{$grid-breakpoint-tab}) {
-        @content;
-    }
-}
-
-@mixin media-lg {
-    @media (min-width: #{$grid-breakpoint-desk}) {
-        @content;
-    }
-}
-
-@mixin media-xl {
-    @media (min-width: #{$grid-breakpoint-hd}) {
-        @content;
-    }
-}
-
 // Pixel to REM Converter
 // ==========================================================================
 

@@ -13,35 +13,14 @@ $pageData = [
     'pageDescription' => '',
 ];
 
-//Minify HTML
-function sanitize_output($buffer) {
-
-    $search = array(
-        '/\>[^\S ]+/s',     // Strip whitespaces after tags, except space
-        '/[^\S ]+\</s',     // Strip whitespaces before tags, except space
-        '/(\s)+/s',         // Shorten multiple whitespace sequences
-        '/<!--(.|\s)*?-->/' // Remove HTML comments
-    );
-
-    $replace = array(
-        '>',
-        '<',
-        '\\1',
-        ''
-    );
-
-    $buffer = preg_replace($search, $replace, $buffer);
-
-    return $buffer;
-}
-
-ob_start("sanitize_output");
-
 ?>
 
 <!DOCTYPE html>
 <html class="no-js" lang="en_GB"> 
 <head>
+    <!-- No index -->
+    <meta name="robots" content="noindex">
+    <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><?php echo ($pageData['pageTitle']); ?></title>
@@ -62,7 +41,9 @@ ob_start("sanitize_output");
     <meta name="twitter:image" content="<?php echo ($websiteData['ogImage']); ?>">
     <!-- CSS -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="<?php echo ($websiteData['siteURL']); ?>/css/app.css">
+    <!-- Preload JS -->
+    <link rel="preload" href="/js/app.js" as="script">
     <!-- Favicon -->
 </head>
 <body>
@@ -75,5 +56,9 @@ ob_start("sanitize_output");
     <?php include_once('partials/SECTION.php') ?>
 </main>
     <?php include_once('partials/footer.php') ?>
+    <!-- Javascript -->
+    <script src="<?php echo ($websiteData['siteURL']); ?>/js/app.js"></script>
+    <!-- Google Transition Fix -->
+    <script> </script>
 </body>
 </html>
