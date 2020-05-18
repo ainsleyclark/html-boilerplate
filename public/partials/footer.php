@@ -1,12 +1,12 @@
 <!-- =====================
     Footer
     ===================== -->
-<footer class="primary">
-    <div class="container-fullwidth">
+<footer class="footer">
+    <div class="container">
         <div class="row">
             <div class="col-12">
                 <h2>Footer</h2>
-            </div>
+            </div><!-- /Col -->
         </div><!-- /Row -->
     </div><!-- /Container -->
 </footer>

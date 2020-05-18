@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// _variables.scss
+// This file contains all variables for use with scss files.
+// -----------------------------------------------------------------------------
+
+// Color
+// ==========================================================================
+
+$white: #fff;
+$black: #000;
+$primary: #ff2451; //! SET
+$secondary: #ff2451; //! SET
+$copy: #000000; //! SET
+
+// Color palette
+$palette: (
+	white: $white,
+	black: $black,
+	primary: $primary,
+	secondary: $secondary,
+	copy: $copy,
+);
+
+// Color attributes
+$color-attr: (
+	c: 'color',
+	bg: 'background-color'
+);
+
+// Sections
+// =========================================================================
+
+$section-padding: (
+	mob: 40px,
+	tab: 70px,
+	desk: 100px,
+	hd: 120px,
+);
+$section-padding-divider: 3

@@ -4,7 +4,7 @@
 $websiteData = [
     'siteURL' => '',
     'siteName' => '',
-    'ogImage' => ''
+    'ogImage' => $websiteData['siteURL'] . '',
 ];
 
 //Page variables
@@ -52,8 +52,12 @@ $pageData = [
             <h2>You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</h2>
         </div>
     <![endif]-->
+    <?php include_once('partials/header.php') ?>
 <main>
-    <?php include_once('partials/SECTION.php') ?>
+    <?php
+        include_once('sections/home.php');
+        include_once('sections/section.php');
+    ?>
 </main>
     <?php include_once('partials/footer.php') ?>
     <!-- Javascript -->

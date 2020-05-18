@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-12">
                 <h2>Hero</h2>
-            </div>
+            </div><!-- /Col -->
         </div><!-- /Row -->
     </div><!-- /Container -->
 </section>

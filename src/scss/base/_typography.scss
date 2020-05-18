@@ -3,9 +3,9 @@
 // This file contains all type declerations (h1, h2, p etc) for whole site.
 // -----------------------------------------------------------------------------
 
-/**
- * Basic typography style for copy text
- */
+// Global
+// =========================================================================
+
 html,
 body {
     color: $copy-text;
@@ -27,8 +27,6 @@ body {
 	}
 }
 
-//@include fluid-type(320px, 1408px, 34px, 98px);
-
 h1,
 h2,
 h3,
@@ -38,6 +36,11 @@ h6,
 p {
 
 }
+
+// Headings
+// =========================================================================
+
+//@include fluid-type(320px, 1408px, 34px, 98px);
 
 h1 {
 
@@ -63,16 +66,23 @@ h6 {
 
 }
 
+// Paragraph
+// =========================================================================
 
-/**
- * Basic styles for links
- */
- a {
-    color: #ffffff; //!SET
-    text-decoration: none;
+p {
+	margin-bottom: 1rem;
+}
 
-    @include on-event {
-        color: #ffffff; //!SET
-        text-decoration: underline;
-    }
+
+// Links
+// =========================================================================
+
+a {
+	color: $primary; //!SET
+	text-decoration: none;
+
+	@include on-event {
+		color: $primary; //!SET
+		text-decoration: underline;
+	}
 }

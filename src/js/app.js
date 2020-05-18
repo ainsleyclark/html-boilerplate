@@ -18,10 +18,11 @@ require('./scripts/helpers.js');
 import LazyLoad from 'vanilla-lazyload';
 
 /**
- *  Comments
- * 
+ * Varables
+ *
  */
-console.log('Javascript Loaded');
+const header = $('.header');
+
 
 /**
  * Vanilla Lazyload

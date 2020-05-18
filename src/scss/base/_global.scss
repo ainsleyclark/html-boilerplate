@@ -3,6 +3,9 @@
 // This file contains very basic styles to reset document.
 // -----------------------------------------------------------------------------
 
+// Global
+// =========================================================================
+
 html,
 body {
     height: 100%;
@@ -25,7 +28,9 @@ body {
 	}
 }
 
-//Resets
+// Resets
+// =========================================================================
+
 figure {
 	margin: 0;
 }
@@ -34,7 +39,9 @@ ul {
 	list-style-type: none;
 }
 
-// Highlight colour
+// Selection Color
+// =========================================================================
+
 ::selection {
 	background: color('primary'); /* WebKit/Blink Browsers */
 	color: #000; //!SET
