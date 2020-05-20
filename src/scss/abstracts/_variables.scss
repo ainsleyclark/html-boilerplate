@@ -36,4 +36,13 @@ $section-padding: (
 	desk: 100px,
 	hd: 120px,
 );
-$section-padding-divider: 3
+$section-padding-divider: 3;
+
+// Hamburger
+// =========================================================================
+
+$hamburger-width: 26px;
+$hamburger-height: 2px;
+$hamburger-margin: 6px;
+$hamburger-border-radius: 4px;
+$hamburger-color: $black;

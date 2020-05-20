@@ -12,7 +12,7 @@
  */
 
 //Local
-require('./scripts/helpers.js');
+import {$, getSiblings} from './scripts/helpers';
 
 //Vendor
 import LazyLoad from 'vanilla-lazyload';
@@ -21,8 +21,9 @@ import LazyLoad from 'vanilla-lazyload';
  * Varables
  *
  */
-const header = $('.header');
-
+const header = $('.header'),
+    nav = $('.nav'),
+    hamburger = $('.hamburger');
 
 /**
  * Vanilla Lazyload
@@ -34,22 +35,22 @@ let lazyLoadInstance = new LazyLoad({
 });
 
 /*
- * scrollToAnchor - Targets all links with # anchor & adds smooth scrolling
+ * Sctoll To Anchor
+ * Targets all links with # anchor & adds smooth scrolling
  *
  */
-
-let headerOffset = header.offsetHeight; //! SET Header
+let headerOffset = header.offsetHeight; 
 
 window.addEventListener("resize", function(){
     headerOffset = header.offsetHeight;
 });
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+$('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
         let offset = headerOffset,
-            section = document.querySelector(anchor.getAttribute('href')),
+            section = $(anchor.getAttribute('href')),
             elementPosition = section.offsetTop,
             offsetPosition = elementPosition - offset;
 
@@ -59,3 +60,43 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+/*
+ * Scroll
+ * Adds header & nav classes after a certain scroll amount dertermined by scrollPos.
+ *
+ */
+const scrollPos = 100;
+window.addEventListener('scroll', function() {
+	if (window.scrollY > scrollPos) {
+		header.classList.add('header-scrolled');
+		nav.classList.add('nav-scrolled');
+	} else {
+		header.classList.remove('header-scrolled');
+		nav.classList.remove('nav-scrolled');
+	}
+});
+
+/*
+ * Nav Click
+ * Adds active classes to header & nav when hamburger is clicked.
+ * Removes classes once a link is clicked.
+ */
+
+// Add active classes
+// hamburger.addEventListener('click', e => {
+// 	header.classList.toggle('header-active');
+// 	nav.classList.toggle('nav-active');
+// });
+
+// Remove active classes when clicked.
+const links = $('.header .nav .nav-item a');
+links.forEach(link => {
+	link.addEventListener('click', e => {
+		if (window.innerWidth < 1025) {
+			header.classList.remove('header-active');
+			nav.classList.remove('nav-mobile-active');
+		}
+	});
+});
+
