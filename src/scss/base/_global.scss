@@ -47,6 +47,6 @@ ul {
 	color: #000; //!SET
 }
 ::-moz-selection {
-	background: color("primary"); /* Gecko Browsers */
+	background: color("primary"); /* Gecko Browsers */ // sass-lint:disable-line no-vendor-prefixes
 	color: #000; //!SET
 }

@@ -111,14 +111,14 @@
 // ==========================================================================
 
 //IE11
-@mixin ie11() {
+@mixin ie11 {
 	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 		@content;
 	}
 }
 
 //IE11 and Edge
-@mixin ie11andedge() {
+@mixin ie11andedge {
 	@media screen and (-webkit-min-device-pixel-ratio: 0) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 		@content;
 	}
