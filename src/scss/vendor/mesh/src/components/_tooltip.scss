@@ -38,7 +38,7 @@
 
 	//Arrow
 	&::before {
-		content: '';
+		content: "";
 		display: inline-block;
 		top: -6px;
 		left: 50%;
@@ -60,7 +60,7 @@
 // ==========================================================================
 
 @if $tooltip-enable-dark {
-	[tooltip-color='dark'] {
+	[tooltip-color="dark"] {
 		&::after {
 			background-color: $tooltip-dark-color;
 			color: color-contrast($tooltip-dark-color);
@@ -76,7 +76,7 @@
 // ==========================================================================
 
 //Top
-[tooltip-position='top'] {
+[tooltip-position="top"] {
 	&::after,
 	&::before {
 		left: 50%;
@@ -84,7 +84,7 @@
 }
 
 //Right
-[tooltip-position='right'] {
+[tooltip-position="right"] {
 	&::after {
 		left: 100%;
 		top: 50%;
@@ -101,7 +101,7 @@
 }
 
 //Bottom
-[tooltip-position='bottom'] {
+[tooltip-position="bottom"] {
 	&::after {
 		top: 100%;
 		margin-top: 8px;
@@ -117,7 +117,7 @@
 }
 
 //Left
-[tooltip-position='left'] {
+[tooltip-position="left"] {
 	&::after {
 		left: 0%;
 		top: 50%;

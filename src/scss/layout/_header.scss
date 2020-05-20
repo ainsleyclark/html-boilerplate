@@ -14,12 +14,12 @@
 	padding: 0 15px;
 	background-color: $header-bg-color;
 	z-index: 99999;
-    transition: background-color 300ms ease;
+	transition: background-color 300ms ease;
 	will-change: background-color;
-	
+
 	// Container
 	// ==========================================================================
-	
+
 	&-cont {
 		display: flex;
 		align-items: center;
@@ -27,29 +27,27 @@
 		height: 100%;
 	}
 
-    // Scrolled
-    // ==========================================================================
+	// Scrolled
+	// ==========================================================================
 
-    &-scrolled {
-        background-color: $header-scrolled-bg-color;
-		box-shadow: 0 3px 6px rgba(0,0,0,.1), 0 3px 6px rgba(0,0,0,.23);
+	&-scrolled {
+		background-color: $header-scrolled-bg-color;
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.23);
 	}
-	
+
 	// Mobile Active
-    // ==========================================================================
+	// ==========================================================================
 
-    &-active {
-
+	&-active {
 		#{$self}-logo {
 			//! TODO: Change colour logo?
 		}
-    }
+	}
 
 	// Tablet
 	// =========================================================================
 
 	@include media-tab {
-
 		&-cont {
 			@if $header-container-width {
 				width: 100%;
@@ -63,6 +61,5 @@
 	// =========================================================================
 
 	@include media-desk {
-
 	}
 }

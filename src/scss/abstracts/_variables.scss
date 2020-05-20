@@ -31,13 +31,13 @@ $palette: (
 	black: $black,
 	primary: $primary,
 	secondary: $secondary,
-	copy: $copy,
+	copy: $copy
 );
 
 // Color attributes
 $color-attr: (
-	c: 'color',
-	bg: 'background-color'
+	c: "color",
+	bg: "background-color"
 );
 
 // Sections
@@ -47,7 +47,7 @@ $section-padding: (
 	mob: 40px,
 	tab: 70px,
 	desk: 100px,
-	hd: 120px,
+	hd: 120px
 );
 $section-padding-divider: 3;
 

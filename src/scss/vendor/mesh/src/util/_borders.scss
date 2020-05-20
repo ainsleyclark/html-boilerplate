@@ -7,13 +7,13 @@
 	border: 0 !important;
 }
 .b {
-	border: #{$border-width} solid map-get($border-colors, 'default') !important;
+	border: #{$border-width} solid map-get($border-colors, "default") !important;
 }
 .b-light {
-	border: #{$border-width} solid map-get($border-colors, 'light') !important;
+	border: #{$border-width} solid map-get($border-colors, "light") !important;
 }
 .b-dark {
-	border: #{$border-width} solid map-get($border-colors, 'dark') !important;
+	border: #{$border-width} solid map-get($border-colors, "dark") !important;
 }
 
 @each $color-abbrev, $color in $border-colors {
@@ -25,7 +25,7 @@
 	);
 
 	@each $property, $border-abbrev in $positions {
-		@if ($color-abbrev == 'default') {
+		@if ($color-abbrev == "default") {
 			.b-#{$border-abbrev} {
 				border-#{$property}: #{$border-width} solid $color !important;
 			}

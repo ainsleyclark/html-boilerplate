@@ -46,11 +46,11 @@ $grid-breakpoint-hd: 1408 !default;
 
 // Properties for grid
 $grid-properties: (
-	'': 0,
-	'-mob': $grid-breakpoint-mob,
-	'-tab': $grid-breakpoint-tab,
-	'-desk': $grid-breakpoint-desk,
-	'-hd': $grid-breakpoint-hd
+	"": 0,
+	"-mob": $grid-breakpoint-mob,
+	"-tab": $grid-breakpoint-tab,
+	"-desk": $grid-breakpoint-desk,
+	"-hd": $grid-breakpoint-hd
 ) !default;
 
 // 2. Display
@@ -107,8 +107,8 @@ $palette: (
 
 // Color attributes
 $color-attr: (
-	c: 'color',
-	bg: 'background-color'
+	c: "color",
+	bg: "background-color"
 ) !default;
 
 // 7. Type
@@ -118,7 +118,7 @@ $color-attr: (
 $type-enable-responsive-text: true;
 
 //Font Stack
-$font-stack: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif !default;
+$font-stack: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !default;
 
 // Font sizes
 $h1-font-size: 3.31rem !default;
@@ -253,7 +253,7 @@ $collapse-content-padding: 15px 15px 20px !default;
 $collapse-title-margin-top: 10px !default;
 
 //Color
-$collapse-active-color: color('secondary') !default;
+$collapse-active-color: color("secondary") !default;
 
 //Border
 $collapse-border: 1px solid #ddd !default;
@@ -273,7 +273,7 @@ $epic-default-padding: 4rem 2rem !default;
 
 $list-background-color: #fff !default;
 $list-border-color: #ddd !default;
-$list-active-color: color('primary') !default;
+$list-active-color: color("primary") !default;
 $list-disabled-color: #999 !default;
 
 // 19. Modal
@@ -333,7 +333,7 @@ $pagination-height: 30px;
 
 //Color
 $pagination-text-color: #999 !default;
-$pagination-active-color: color('primary') !default;
+$pagination-active-color: color("primary") !default;
 
 //Font size
 $pagination-font-size: 12px !default;
@@ -357,8 +357,8 @@ $table-row-font-size: 14px !default;
 // ==========================================================================
 
 //Color & opacity
-$tabs-active-color: color('primary') !default;
-$tabs-active-bar-color: color('primary') !default;
+$tabs-active-color: color("primary") !default;
+$tabs-active-bar-color: color("primary") !default;
 $tabs-border-color: 1px solid rgba(0, 0, 0, 0.12) !default;
 
 //Font

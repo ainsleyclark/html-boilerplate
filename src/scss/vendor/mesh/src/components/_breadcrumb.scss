@@ -20,7 +20,7 @@
 
 		//Slash breadcrumb
 		&:after {
-			content: '\002F';
+			content: "\002F";
 			padding-right: 3px;
 			font-size: 1rem;
 			margin-left: 5px;
@@ -30,7 +30,7 @@
 
 	//Arrow breadcrumb
 	&.breadcrumb-arrow &-item:after {
-		content: '\203A';
+		content: "\203A";
 	}
 
 	//Remove last slash/arrow from breadcrumb

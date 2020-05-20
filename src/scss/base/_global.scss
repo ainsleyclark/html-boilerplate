@@ -8,16 +8,16 @@
 
 html,
 body {
-    height: 100%;
-    width: 100%;
-    padding: 0;
-    margin: 0;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 .trans {
@@ -43,10 +43,10 @@ ul {
 // =========================================================================
 
 ::selection {
-	background: color('primary'); /* WebKit/Blink Browsers */
+	background: color("primary"); /* WebKit/Blink Browsers */
 	color: #000; //!SET
 }
 ::-moz-selection {
-	background: color('primary'); /* Gecko Browsers */
+	background: color("primary"); /* Gecko Browsers */
 	color: #000; //!SET
 }

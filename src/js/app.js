@@ -22,16 +22,16 @@ import LazyLoad from 'vanilla-lazyload';
  *
  */
 const header = $('.header'),
-    nav = $('.nav'),
-    hamburger = $('.hamburger');
+	nav = $('.nav'),
+	hamburger = $('.hamburger');
 
 /**
  * Vanilla Lazyload
  * 
  */
 let lazyLoadInstance = new LazyLoad({
-    elements_selector: ".lazy"
-    // ... more custom settings?
+	elements_selector: '.lazy'
+	// ... more custom settings?
 });
 
 /*
@@ -41,24 +41,24 @@ let lazyLoadInstance = new LazyLoad({
  */
 let headerOffset = header.offsetHeight; 
 
-window.addEventListener("resize", function(){
-    headerOffset = header.offsetHeight;
+window.addEventListener('resize', function(){
+	headerOffset = header.offsetHeight;
 });
 
 $('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+	anchor.addEventListener('click', function (e) {
+		e.preventDefault();
 
-        let offset = headerOffset,
-            section = $(anchor.getAttribute('href')),
-            elementPosition = section.offsetTop,
-            offsetPosition = elementPosition - offset;
+		let offset = headerOffset,
+			section = $(anchor.getAttribute('href')),
+			elementPosition = section.offsetTop,
+			offsetPosition = elementPosition - offset;
 
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth"
-        });
-    });
+		window.scrollTo({
+			top: offsetPosition,
+			behavior: 'smooth'
+		});
+	});
 });
 
 /*

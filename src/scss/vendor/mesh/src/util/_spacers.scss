@@ -3,7 +3,7 @@
 //Adds spacers based on spacer-properties map
 // ==========================================================================
 
-[class^='spacer'] {
+[class^="spacer"] {
 	width: 100%;
 	display: block;
 	font-size: 0;
@@ -14,7 +14,7 @@
 
 @each $value in $spacer-properties {
 	//Rid of px in $value
-	$class-value: str-replace(#{$value}, 'px', '');
+	$class-value: str-replace(#{$value}, "px", "");
 	.spacer-#{$class-value} {
 		// height: px-to-rem($value) !important;
 		height: $value !important;
