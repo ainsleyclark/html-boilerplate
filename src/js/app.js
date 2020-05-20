@@ -79,15 +79,8 @@ window.addEventListener('scroll', function() {
 
 /*
  * Nav Click
- * Adds active classes to header & nav when hamburger is clicked.
  * Removes classes once a link is clicked.
  */
-
-// Add active classes
-// hamburger.addEventListener('click', e => {
-// 	header.classList.toggle('header-active');
-// 	nav.classList.toggle('nav-active');
-// });
 
 // Remove active classes when clicked.
 const links = $('.header .nav .nav-item a');

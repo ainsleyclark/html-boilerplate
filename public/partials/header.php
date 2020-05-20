@@ -8,10 +8,10 @@
             <img src="" alt="">
         </figure>
         <!-- Hamburger -->
+        <input class="hamburger-checkbox" type="checkbox" id="hamburger-check" />
         <div class="hamburger">
-            <input class="hamburger-checkbox" type="checkbox" id="hamburger-check" />
             <label for="hamburger-check" class="hamburger-box">
-                <span class="hamburger-inner"></div>
+                <span class="hamburger-inner"></span>
             </label>
         </div>
         <!-- Navigation -->
@@ -27,5 +27,3 @@
         </nav>
     </div>
 </header>
-
-<div class="container"></div>

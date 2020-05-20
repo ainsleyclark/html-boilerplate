@@ -55,6 +55,7 @@ $section-padding-divider: 3;
 // =========================================================================
 
 $header-height: 72px;
+$header-container-width: true;
 $header-bg-color: rgba($black, 0.4);
 $header-scrolled-bg-color: $primary;
 
@@ -64,12 +65,14 @@ $header-scrolled-bg-color: $primary;
 $nav-mob-bg-color: $primary;
 $nav-mob-item-color: $black;
 $nav-desk-item-color: $black;
+$nav-transition-time: 700ms;
 
 // Hamburger
 // =========================================================================
 
 $hamburger-width: 26px;
-$hamburger-height: 2px;
-$hamburger-margin: 6px;
+$hamburger-height: 2.4px;
+$hamburger-margin: 7px;
 $hamburger-border-radius: 4px;
 $hamburger-color: $black;
+$hamburger-active-color: $white;

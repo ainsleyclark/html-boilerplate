@@ -14,6 +14,7 @@
     text-transform: none;
     border: 0;
     background-color: transparent;
+    z-index: 999999;
     transition-timing-function: linear;
     transition-duration: .15s;
     transition-property: opacity, filter;
@@ -52,7 +53,7 @@
         height: $hamburger-height;
         border-radius: $hamburger-border-radius;
         background-color: $hamburger-color;
-        transition: transform .15s ease;
+        transition: transform .15s ease, color .15s ease;
         will-change: transform;
     }
 
@@ -85,11 +86,18 @@
     // Active
 	// =========================================================================
 
+    // Hamburger Animation
     &-active #{$self}-inner,
-    &-checkbox:checked ~ #{$self}-box #{$self}-inner  {
+    &-checkbox:checked ~ & &-box &-inner  {
         transition-delay: .12s;
         transition-timing-function: cubic-bezier(.215,.61,.355,1);
         transform: rotate(45deg);
+
+        &,
+        &:before,
+        &:after {
+            background-color: $hamburger-active-color;
+        }
 
         &:before {
             top: 0;
@@ -102,6 +110,13 @@
             transition: bottom 75ms ease,transform 75ms cubic-bezier(.215,.61,.355,1) .12s;
             transform: rotate(-90deg);
         }
+    }
+
+    // Nav Animation
+    &-checkbox:checked ~ .nav {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity $nav-transition-time, visibility $nav-transition-time step-start;
     }
 
 	// Desktop
