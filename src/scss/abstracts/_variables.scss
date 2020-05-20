@@ -3,6 +3,19 @@
 // This file contains all variables for use with scss files.
 // -----------------------------------------------------------------------------
 
+// Grid
+// ==========================================================================
+
+// Columns
+$grid-columns: 12;
+$gap-width: 15px;
+
+// Breakpoints
+$grid-breakpoint-mob: 568;
+$grid-breakpoint-tab: 768;
+$grid-breakpoint-desk: 1024;
+$grid-breakpoint-hd: 1408;
+
 // Color
 // ==========================================================================
 
@@ -37,6 +50,20 @@ $section-padding: (
 	hd: 120px,
 );
 $section-padding-divider: 3;
+
+// Header
+// =========================================================================
+
+$header-height: 72px;
+$header-bg-color: rgba($black, 0.4);
+$header-scrolled-bg-color: $primary;
+
+// Nav
+// =========================================================================
+
+$nav-mob-bg-color: $primary;
+$nav-mob-item-color: $black;
+$nav-desk-item-color: $black;
 
 // Hamburger
 // =========================================================================
