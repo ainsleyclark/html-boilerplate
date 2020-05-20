@@ -3,7 +3,8 @@
 // This file contains all mixin's for use with scss files.
 // -----------------------------------------------------------------------------
 
-// sass-lint:disable nesting-depth
+// sass-lint:disable no-duplicate-properties
+// sass-lint:disable no-vendor-prefixes
 
 // Pixel to REM Converter
 // ==========================================================================
@@ -68,17 +69,8 @@
 		background: -webkit-linear-gradient(left, $start-color, $end-color);
 		background: linear-gradient(to right, $start-color, $end-color);
 	} @else {
-		background: -webkit-radial-gradient(
-			center,
-			ellipse cover,
-			$start-color,
-			$end-color
-		);
-		background: radial-gradient(
-			ellipse at center,
-			$start-color,
-			$end-color
-		);
+		background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+		background: radial-gradient(ellipse at center, $start-color, $end-color);
 	}
 }
 //Usage:
@@ -104,16 +96,7 @@
 		& {
 			font-size: $min-font-size;
 			@media screen and (min-width: $min-vw) {
-				font-size: calc(
-					#{$min-font-size} + #{strip-unit(
-							$max-font-size - $min-font-size
-						)} *
-						(
-							(100vw - #{$min-vw}) / #{strip-unit(
-									$max-vw - $min-vw
-								)}
-						)
-				);
+				font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 			}
 			@media screen and (min-width: $max-vw) {
 				font-size: $max-font-size;
@@ -136,8 +119,7 @@
 
 //IE11 and Edge
 @mixin ie11andedge() {
-	@media screen and (-webkit-min-device-pixel-ratio: 0) and (-ms-high-contrast: none),
-		(-ms-high-contrast: active) {
+	@media screen and (-webkit-min-device-pixel-ratio: 0) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 		@content;
 	}
 }
