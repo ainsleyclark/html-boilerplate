@@ -19,6 +19,7 @@
     "license": "MIT",
     "dependencies": {
         "imagemin-mozjpeg": "^8.0.0",
+        "smoothscroll-polyfill": "^0.4.4",
         "vanilla-lazyload": "^12.5.1"
     },
     "devDependencies": {

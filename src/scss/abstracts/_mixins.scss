@@ -107,19 +107,60 @@
 //Usage:
 //@include fluid-type(320px, 1408px, 34px, 98px);
 
+// Landscape Mixin
+// ==========================================================================
+
+@mixin landscape {
+	@media screen and (orientation:landscape) {
+		@content;
+	}
+}
+
 // IE11 & Edge Mixins
 // ==========================================================================
 
-//IE11
+// IE11
 @mixin ie11 {
 	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 		@content;
 	}
 }
 
-//IE11 and Edge
+// IE11 and Edge
 @mixin ie11andedge {
 	@media screen and (-webkit-min-device-pixel-ratio: 0) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 		@content;
+	}
+}
+
+// Firefox
+@mixin firefox {
+	@-moz-document url-prefix() {
+		@content;
+	}
+}
+
+//! UNTESTED 
+
+// Firefox
+@mixin firefox {
+	@-moz-document url-prefix() {
+		@content;
+	}
+}
+
+// Chrome
+@mixin firefox {
+	@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+		@content;
+	}
+}
+
+// Safari
+@mixin safari {
+	@media not all and (min-resolution:.001dpcm){ 
+		@supports (-webkit-appearance:none) {
+			@content;
+		}
 	}
 }

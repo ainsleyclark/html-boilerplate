@@ -13,6 +13,7 @@
 
 //Local
 import {$, getSiblings} from './scripts/helpers';
+require('./scripts/polyfills');
 
 //Vendor
 import LazyLoad from 'vanilla-lazyload';
@@ -24,6 +25,13 @@ import LazyLoad from 'vanilla-lazyload';
 const header = $('.header'),
 	nav = $('.nav'),
 	hamburger = $('.hamburger');
+
+/*
+ * Remove No JS Body Class
+ *
+ */
+html.classList.remove('no-js');
+html.classList.add('js');
 
 /**
  * Vanilla Lazyload

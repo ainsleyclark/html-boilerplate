@@ -16,8 +16,13 @@
 const mix = require('laravel-mix');
 const Path = require('path');
 const BrowsersSupport = require("./config/browserslistrc.js");
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 require('laravel-mix-imagemin');
 
+/**
+ * Set paths
+ * 
+ */
 mix.setPublicPath('public')
 
 /**
@@ -39,7 +44,23 @@ mix.sass('src/scss/app.scss', 'public/css/app.css')
  * 
  */
 // mix.browserSync({
+//     proxy:"localhost:8000",
+//     baseDir: "./public/",
+//     open: true,
+//     notify: false
 // });
+mix.webpackConfig({
+    plugins: [
+        new BrowserSyncPlugin({
+            host: 'localhost',
+            port: 8000,
+            server: { baseDir: ['public'] },
+            files: [
+                '**/*.css'
+            ]
+        })
+    ]
+})
 
 /**
  * Images 

@@ -4,7 +4,14 @@
 $websiteData = [
     'siteURL' => '',
     'siteName' => '',
+    'logo' => '',
     'ogImage' => $websiteData['siteURL'] . '',
+    'telephone' => '0000000000',
+    'social' => [
+        'twitter' => 'twitter.com',
+        'facebook' => 'facebook.com',
+        'linkedin' => 'linkedin.com',
+    ],
 ];
 
 //Page variables
@@ -18,7 +25,10 @@ $pageData = [
 <!DOCTYPE html>
 <html class="no-js" lang="en_GB"> 
 <head>
-    <!-- No index -->
+    <!-- No index // Server name example 'igamingseo.com' -->
+    <?php if ($_SERVER['SERVER_NAME'] !== 'WEBSITE HERE') { ?>
+        <meta name="robots" content="noindex">
+    <?php } ?>
     <meta name="robots" content="noindex">
     <!-- Meta -->
     <meta charset="utf-8">
@@ -44,7 +54,41 @@ $pageData = [
     <link rel="stylesheet" href="<?php echo ($websiteData['siteURL']); ?>/css/app.css">
     <!-- Preload JS -->
     <link rel="preload" href="/js/app.js" as="script">
+    <!-- Schema - Organisation -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "<?php echo ($websiteData['siteURL']); ?>",
+            "url": "<?php echo ($websiteData['siteName']); ?>",
+            "logo": "<?php echo ($websiteData['logo']); ?>",
+            "contactPoint": [
+                {
+                    "@type": "ContactPoint",
+                    "telephone": "<?php echo ($websiteData['telephone']); ?>",
+                    "contactType": "sales",
+                    "contactOption": null,
+                    "areaServed": null
+                }
+            ],
+            "sameAs": [
+                <?php
+                    foreach ($websiteData['social'] as $socialKey => $socialAddress) {
+                        echo '"' . $socialAddress . '"' . PHP_EOL;
+                        if ($socialKey !== array_key_last($websiteData['social'])) {
+                            echo ',';
+                        }
+                    }
+                ?>
+            ]
+        }
+    </script>
     <!-- Favicon -->
+
+    <!-- Google Analytics -->
+    <?php if ($_SERVER['SERVER_NAME'] !== 'WEBSITE HERE') { ?>
+    
+    <?php } ?>
 </head>
 <body>
     <!--[if lte IE 9]>
