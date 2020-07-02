@@ -1,11 +1,18 @@
 <?php
 
+/**
+ * Base Config for framework
+ */
+require_once __DIR__ . '/../framework/App.php';
+$app = new \app\core\App();
+
+
 //Website variables
 $websiteData = [
     'siteURL' => '',
     'siteName' => '',
     'logo' => '',
-    'ogImage' => $websiteData['siteURL'] . '',
+    'ogImage' => '',
     'telephone' => '0000000000',
     'social' => [
         'twitter' => 'twitter.com',
@@ -26,10 +33,9 @@ $pageData = [
 <html class="no-js" lang="en_GB"> 
 <head>
     <!-- No index // Server name example 'igamingseo.com' -->
-    <?php if ($_SERVER['SERVER_NAME'] !== 'WEBSITE HERE') { ?>
+    <?php if (getenv('APP_ENV') !== 'production') { ?>
         <meta name="robots" content="noindex">
     <?php } ?>
-    <meta name="robots" content="noindex">
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
