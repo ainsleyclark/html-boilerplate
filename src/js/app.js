@@ -19,10 +19,11 @@ require('./scripts/polyfills');
 import LazyLoad from 'vanilla-lazyload';
 
 /**
- * Varables
+ * Variables
  *
  */
-const header = $('.header'),
+const html = $('html'),
+	header = $('.header'),
 	nav = $('.nav'),
 	hamburger = $('.hamburger');
 
@@ -43,7 +44,7 @@ let lazyLoadInstance = new LazyLoad({
 });
 
 /*
- * Sctoll To Anchor
+ * Scroll To Anchor
  * Targets all links with # anchor & adds smooth scrolling
  *
  */
@@ -71,7 +72,7 @@ $('a[href^="#"]').forEach(anchor => {
 
 /*
  * Scroll
- * Adds header & nav classes after a certain scroll amount dertermined by scrollPos.
+ * Adds header & nav classes after a certain scroll amount determined by scrollPos.
  *
  */
 const scrollPos = 100;

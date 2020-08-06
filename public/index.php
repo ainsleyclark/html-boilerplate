@@ -1,12 +1,5 @@
 <?php
 
-/**
- * Base Config for framework
- */
-require_once __DIR__ . '/../framework/App.php';
-$app = new \app\core\App();
-
-
 //Website variables
 $websiteData = [
     'siteURL' => '',
@@ -33,7 +26,7 @@ $pageData = [
 <html class="no-js" lang="en_GB"> 
 <head>
     <!-- No index // Server name example 'igamingseo.com' -->
-    <?php if (getenv('APP_ENV') !== 'production') { ?>
+    <?php  if ($_SERVER['SERVER_NAME'] !== 'WEBSITE HERE') { ?>
         <meta name="robots" content="noindex">
     <?php } ?>
     <!-- Meta -->
