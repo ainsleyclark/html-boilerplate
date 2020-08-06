@@ -49,18 +49,18 @@ mix.sass('src/scss/app.scss', 'public/css/app.css')
 //     open: true,
 //     notify: false
 // });
-mix.webpackConfig({
-    plugins: [
-        new BrowserSyncPlugin({
-            host: 'localhost',
-            port: 8000,
-            server: { baseDir: ['public'] },
-            files: [
-                '**/*.css'
-            ]
-        })
-    ]
-})
+// mix.webpackConfig({
+//     plugins: [
+//         new BrowserSyncPlugin({
+//             host: 'localhost',
+//             port: 8000,
+//             server: { baseDir: ['public'] },
+//             files: [
+//                 '**/*.css'
+//             ]
+//         })
+//     ]
+// })
 
 /**
  * Images 

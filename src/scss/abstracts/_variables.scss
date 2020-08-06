@@ -20,16 +20,16 @@ $grid-breakpoint-hd: 1408;
 // ==========================================================================
 
 $font: "CHANGE FONT FAMILY";
-$font-path: '/';
+$font-path: '/fonts/';
 
 // Color
 // ==========================================================================
 
 $white: #fff;
 $black: #000;
-$primary: #ff2451; //! SET
-$secondary: #ff2451; //! SET
-$copy: #000000; //! SET
+$primary: #ff2451;
+$secondary: #ff2451;
+$copy: #000000;
 
 // Color palette
 $palette: (
@@ -62,7 +62,7 @@ $section-padding-divider: 3;
 
 $header-height: 72px;
 $header-container-width: true;
-$header-bg-color: rgba($black, 0.4);
+$header-bg-color: $primary;
 $header-scrolled-bg-color: $primary;
 
 // Nav
@@ -82,3 +82,10 @@ $hamburger-margin: 7px;
 $hamburger-border-radius: 4px;
 $hamburger-color: $black;
 $hamburger-active-color: $white;
+
+// Text
+// ==========================================================================
+
+$text-cont-margin-mob: 1rem;
+$text-cont-margin-tab: 1.2rem;
+$text-cont-margin: 1.4rem;

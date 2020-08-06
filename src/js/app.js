@@ -77,7 +77,7 @@ $('a[href^="#"]').forEach(anchor => {
  */
 const scrollPos = 100;
 window.addEventListener('scroll', function() {
-	if (window.scrollY > scrollPos) {
+	if (window.pageYOffset > scrollPos) {
 		header.classList.add('header-scrolled');
 		nav.classList.add('nav-scrolled');
 	} else {
@@ -98,6 +98,7 @@ links.forEach(link => {
 		if (window.innerWidth < 1025) {
 			header.classList.remove('header-active');
 			nav.classList.remove('nav-mobile-active');
+			$('#hamburger-check').checked = '';
 		}
 	});
 });

@@ -34,6 +34,7 @@ h4,
 h5,
 h6,
 p {
+	margin: 0;
 }
 
 // Headings
@@ -63,6 +64,7 @@ h6 {
 // =========================================================================
 
 p {
+	color: $copy;
 	margin-bottom: 1rem;
 }
 
@@ -70,11 +72,34 @@ p {
 // =========================================================================
 
 a {
-	color: $primary; //!SET
+	color: $primary;
 	text-decoration: none;
 
 	@include on-event {
-		color: $primary; //!SET
+		color: $primary;
 		text-decoration: underline;
+	}
+}
+
+// Text Containers
+// =========================================================================
+
+.text-cont {
+	margin-bottom: $text-cont-margin;
+
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+
+	&-no-margin {
+		margin-bottom: 0 !important;
+	}
+
+	@include media-tab {
+		margin-bottom: $text-cont-margin-tab;
+	}
+
+	@include media-desk {
+		margin-bottom: $text-cont-margin;
 	}
 }

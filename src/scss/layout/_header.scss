@@ -55,6 +55,8 @@
 	// =========================================================================
 
 	@include media-tab {
+		padding: 0;
+
 		&-cont {
 			@if $header-container-width {
 				width: 100%;
@@ -68,5 +70,21 @@
 	// =========================================================================
 
 	@include media-desk {
+		&-cont {
+			@if $header-container-width {
+				max-width: $grid-breakpoint-desk * 1px;
+			}
+		}
+	}
+
+	// HD
+	// =========================================================================
+
+	@include media-hd {
+		&-cont {
+			@if $header-container-width {
+				max-width: $grid-breakpoint-hd * 1px;
+			}
+		}
 	}
 }
