@@ -5532,9 +5532,7 @@ a:focus {
   z-index: 999999;
   transition-timing-function: linear;
   transition-duration: 0.15s;
-  transition-property: opacity, -webkit-filter;
   transition-property: opacity, filter;
-  transition-property: opacity, filter, -webkit-filter;
   will-change: opacity, filter;
 }
 
@@ -5645,7 +5643,7 @@ a:focus {
   height: 72px;
   width: 100vw;
   padding: 0 15px;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #ff2451;
   z-index: 99999;
   transition: background-color 300ms ease;
   will-change: background-color;
@@ -5818,6 +5816,17 @@ a:focus {
   padding-bottom: 0 !important;
 }
 
+.form-input {
+  position: relative;
+  width: 100%;
+  border: 0;
+  outline: none;
+  color: #000000;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+
 .form input:-webkit-autofill,
 .form input:-webkit-autofill:hover,
 .form input:-webkit-autofill:focus,
@@ -5833,13 +5842,6 @@ a:focus {
 }
 
 .form :-ms-input-placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #000000;
-  opacity: 1;
-  /* Firefox */
-}
-
-.form ::-ms-input-placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #000000;
   opacity: 1;

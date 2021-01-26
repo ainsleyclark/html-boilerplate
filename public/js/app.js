@@ -818,7 +818,7 @@ if (!Element.prototype.closest) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: Undefined variable: \"$copy-text\".\n        on line 11 of src/scss/base/_typography.scss\n        from line 25 of /Users/ainsley/Desktop/Web/boilerplates/html-and-php/src/scss/app.scss\n>> \tcolor: $copy-text;\n\n   --------^\n\n    at /Users/ainsley/Desktop/Web/boilerplates/html-and-php/node_modules/webpack/lib/NormalModule.js:316:20\n    at /Users/ainsley/Desktop/Web/boilerplates/html-and-php/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /Users/ainsley/Desktop/Web/boilerplates/html-and-php/node_modules/loader-runner/lib/LoaderRunner.js:233:18\n    at context.callback (/Users/ainsley/Desktop/Web/boilerplates/html-and-php/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.callback (/Users/ainsley/Desktop/Web/boilerplates/html-and-php/node_modules/sass-loader/dist/index.js:73:7)\n    at Object.done [as callback] (/Users/ainsley/Desktop/Web/boilerplates/html-and-php/node_modules/neo-async/async.js:8069:18)\n    at options.error (/Users/ainsley/Desktop/Web/boilerplates/html-and-php/node_modules/node-sass/lib/index.js:294:32)");
 
 /***/ }),
 
