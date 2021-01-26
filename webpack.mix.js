@@ -17,7 +17,7 @@ const mix = require('laravel-mix');
 const Path = require('path');
 const BrowsersSupport = require("./config/browserslistrc.js");
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-require('laravel-mix-imagemin');
+//require('laravel-mix-imagemin');
 
 /**
  * Set paths
@@ -62,29 +62,7 @@ mix.sass('src/scss/app.scss', 'public/css/app.css')
 //     ]
 // })
 
-/**
- * Images 
- * Copies & compresses image files.
- * 
- */
-mix.imagemin(
-    'images/**.*',
-    {
-        context: 'src',
-    },
-    {
-        optipng: {
-            optimizationLevel: 5
-        },
-        jpegtran: null,
-        plugins: [
-            require('imagemin-mozjpeg')({
-                quality: 100,
-                progressive: true,
-            }),
-        ],
-    }
-);
+
 
 /**
  * Production
@@ -104,6 +82,11 @@ if (mix.config.production) {
         }
     })
 
+    /**
+     * Images 
+     * Copies & compresses image files.
+     * 
+     */
     mix.imagemin(
         'img/**.*',
         {
